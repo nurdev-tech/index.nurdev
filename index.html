@@ -128,6 +128,56 @@
             <button><a href="https://nurdev-pix.github.io/NurDev/page.html" target="_blank" rel="noopener noreferrer">Перейти</a></button>
         </section>
     </section>
-    <script src="script.js"></script>
+
+    <div id="commentsSection">
+        <h2>Комментарии</h2>
+        <div id="comments"></div>
+        <input type="text" id="commentInput" placeholder="Введите комментарий">
+        <button id="submitButton" onclick="addComment()">Отправить</button>
+    </div>
+    <script src="script.js">
+                // Firebase SDK инициализация
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getDatabase, ref, push, onChildAdded } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCl2BoZm3n6JK1VOIp8i7V30GZKF75-slY",
+            authDomain: "nurdev-63079.firebaseapp.com",
+            projectId: "nurdev-63079",
+            storageBucket: "nurdev-63079.appspot.com",
+            messagingSenderId: "538089626834",
+            appId: "1:538089626834:web:88191ec0e11f3fd0b7610b",
+            measurementId: "G-WHJG7ETYTG"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Функция добавления комментария
+        function addComment() {
+            const commentText = document.getElementById("commentInput").value;
+            if (commentText) {
+                const commentsRef = ref(database, 'comments');
+                push(commentsRef, {
+                    text: commentText,
+                    timestamp: new Date().toISOString()
+                });
+                document.getElementById("commentInput").value = '';
+            }
+        }
+
+        // Функция загрузки комментариев
+        function loadComments() {
+            const commentsDiv = document.getElementById("comments");
+            const commentsRef = ref(database, 'comments');
+            onChildAdded(commentsRef, (snapshot) => {
+                const comment = snapshot.val();
+                const commentElement = document.createElement("div");
+                commentElement.classList.add("comment");
+                commentElement.textContent = comment.text;
+                commentsDiv.appendChild(commentElement);
+            });
+            }
+    </script>
 </body>
 </html>
