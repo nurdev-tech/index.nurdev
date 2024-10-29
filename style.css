@@ -1,0 +1,381 @@
+body {
+    background-color: black;
+    justify-content: center;
+    box-sizing: border-box;
+    animation: colorChange 4.8s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: black;
+    }
+    25% {
+        background-color: rgb(50, 50, 50);
+    }
+    59% {
+        background-color: black;
+    }
+    75% {
+        background-color: rgb(50, 50, 50);
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+header {
+    background-color: unset;
+    padding: 20px;
+    color: aliceblue;
+    border: 1px solid  grey;
+    border-radius: 1rem;
+    box-shadow: 0 0 9px grey;
+    display: 1;
+    margin-bottom: 10px;
+    animation: Boxshadow 3.8s infinite;
+}
+.headers {
+    border-radius: 1rem;
+    margin-bottom: 8px;
+    animation: Boxshadows 3.8s infinite;
+}
+
+@keyframes Boxshadow {
+    0% {
+    color: aliceblue;
+    box-shadow: 0 0 9px white;
+    font-size: 16px;
+    margin-bottom: 5px;
+    }
+    25% {
+    color: grey;
+    box-shadow: 0 0 9px grey;
+    font-size: 16px;
+    margin-bottom: 5px;
+    }
+    50% {
+        color: aliceblue;
+        margin-bottom: 5px;
+        font-size: 16px;
+        box-shadow: 0 0 9px white;
+    }
+    75% {
+        color: grey;
+        margin-bottom: 5px;
+        font-size: 16px;
+        box-shadow: 0 0 9px grey;
+    }
+    100% {
+        color: aliceblue;
+        font-size: 16px;
+        margin-bottom: 5px;
+        box-shadow: 0 0 9px white;
+    }
+}
+
+@keyframes Boxshadows {
+    0% {
+        color: aliceblue;
+        box-shadow: 0 0 9px white;
+        font-size: 16px;
+    }
+
+    25% {
+        color: grey;
+        box-shadow: 0 0 9px grey;
+        font-size: 16px;
+    }
+
+    50% {
+        color: aliceblue;
+        box-shadow: 0 0 9px white;
+        font-size: 16px;
+        
+    }
+
+    75% {
+        color: grey;
+        box-shadow: 0 0 9px grey;
+        font-size: 16px;
+       
+    }
+
+    100% {
+        color: aliceblue;
+        font-size: 16px;
+        box-shadow: 0 0 9px white;
+    }
+}
+
+.headers nav {
+    background-color: unset;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 1rem;
+    display: 2;
+    text-align: center;
+    animation: Boxshadows 3.8 infinite;
+}
+
+.headers nav ul a {
+    list-style: none;
+    color: aliceblue;
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 1.8s;
+    animation: Boxshadow 2.8 infinite;}
+
+nav ul a:hover {
+    color: blanchedalmond;
+    opacity: 0.8;
+}
+
+h2,h3 {
+    text-align: center;
+    color: orange;
+}
+.profile {
+    border-radius: 50%;
+    width: 28%;
+}
+
+.verifed {
+    width: 10%;
+    float: inline-start;
+    right: 5%;
+}
+
+#channels {
+    text-align: center;
+    background-color: unset;
+    border: 1px solid grey;
+    border-radius: 2rem;
+    box-shadow: 0 0 9px grey;
+    padding: 20px;
+    color: aliceblue;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 4.8s;
+}
+
+#home {
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: unset;
+    border: 1px solid grey;
+    border-radius: 2rem;
+    box-shadow: 0 0 9px grey;
+    padding: 20px;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all 4.8s;
+}
+
+#apps {
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: unset;
+    border: 1px solid grey;
+    border-radius: 2rem;
+    box-shadow: 0 0 9px grey;
+    padding: 20px;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all 4.8s;
+}
+
+#webs {
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: unset;
+    border: 1px solid grey;
+    border-radius: 2rem;
+    box-shadow: 0 0 9px grey;
+    padding: 20px;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all 4.8s;
+}
+
+#home .Skills {
+    font-size: bold;
+
+}
+
+#channels p {
+    cursor: pointer;
+    transition: all 3.8s;
+}
+
+p:hover {
+    color: greenyellow;
+    opacity: 2;
+    font-size: 17px;
+}
+
+#home nav ul {
+    text-align: center;
+    background-color: unset;
+    padding: 5px;
+    border-radius: 3rem;
+    border: 1px solid grey;
+    box-shadow: 0 0 5px grey;
+    cursor: pointer;
+    transition: all 3.8s;
+}
+
+#home nav ul:hover {
+    color: greenyellow;
+    border: 1px solid greenyellow;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px greenyellow;
+}
+
+#channels nav ul {
+    text-align: center;
+    background-color: unset;
+    padding: 5px;
+    border-radius: 3rem;
+    border: 1px solid grey;
+    box-shadow: 0 0 5px grey;
+    cursor: pointer;
+    transition: all 3.8s;
+}
+
+#channels nav ul:hover {
+    color: greenyellow;
+    border: 1px solid greenyellow;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px greenyellow;
+}
+
+#channels .clap {
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 2rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+#channels .clap button {
+    background-color: unset;
+    color: blue;
+    list-style: none;
+    border-style: none;
+    
+}
+
+#channels .clap a {
+    font-size: 20px;
+    text-decoration: none;
+    color: aquamarine;
+    font-style: normal;
+}
+
+#channels .clap a:hover {
+    color: aqua;
+}
+
+#channels .clap button {
+    transition: all 4.8s;
+    cursor: pointer;
+}
+
+#channels .clap button:hover {
+    transform: scale(1.3);
+}
+
+
+#webs .clap {
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 2rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+#webs .clap button {
+    background-color: unset;
+    color: blue;
+    list-style: none;
+    border-style: none;
+
+}
+
+#webs .clap a {
+    font-size: 20px;
+    text-decoration: none;
+    color: aquamarine;
+    font-style: normal;
+}
+
+#webs .clap a:hover {
+    color: aqua;
+}
+
+#webs .clap button {
+    transition: all 4.8s;
+    cursor: pointer;
+}
+
+#webs .clap button:hover {
+    transform: scale(1.3);
+}
+
+
+#apps button {
+    background-color: unset;
+    color: blue;
+    list-style: none;
+    border-style: none;
+
+}
+
+#apps a {
+    font-size: 20px;
+    text-decoration: none;
+    color: aquamarine;
+    font-style: normal;
+}
+
+#apps a:hover {
+    color: aqua;
+}
+
+#apps button {
+    transition: all 4.8s;
+    cursor: pointer;
+}
+
+#apps button:hover {
+    transform: scale(1.3);
+}
+
+#webs button {
+    background-color: unset;
+    color: blue;
+    list-style: none;
+    border-style: none;
+
+}
+
+#webs a {
+    font-size: 20px;
+    text-decoration: none;
+    color: aquamarine;
+    font-style: normal;
+}
+
+#webs a:hover {
+    color: aqua;
+}
+
+#webs button {
+    transition: all 4.8s;
+    cursor: pointer;
+}
+
+#webs button:hover {
+    transform: scale(1.3);
+}
